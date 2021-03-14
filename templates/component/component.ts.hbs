@@ -1,0 +1,30 @@
+/**
+*
+* {{ pascalCase name }}
+*
+*/
+
+{{#if memo}}
+import React, { memo } from 'react';
+{{else}}
+import React from 'react';
+{{/if}}
+
+interface {{ pascalCase name }}Props {
+children?: React.Node
+}
+
+const {{ pascalCase name }}: React.FC<{{ pascalCase name }}Props> = () => {
+    return (
+    <div>
+        {{ pascalCase name }}
+    </div>
+    );
+    }
+
+
+    {{#if memo}}
+    export default memo({{ pascalCase name }});
+    {{else}}
+    export default {{ pascalCase name }};
+    {{/if}}

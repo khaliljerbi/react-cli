@@ -1,0 +1,12 @@
+import React from 'react';
+import { render } from 'react-testing-library';
+
+describe(`{{ pascalCase name }} component test suite`, () => {
+it.should('Should render and match the snapshot', () => {
+const {
+container: { firstChild },
+} = render(
+<{{ pascalCase name }} />);
+expect(firstChild).toMatchSnapshot();
+});
+})
